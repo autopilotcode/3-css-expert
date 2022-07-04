@@ -163,12 +163,14 @@ main {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     }
 
+
     .main-footer__link {
-    display: inline-block;
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
     }
 
     .main-footer__link a {
@@ -246,4 +248,22 @@ main {
 
 .open {
     display: block !important;
+}
+
+@media (min-width: 40rem) {
+
+  .main-footer__link {
+    margin: 0rem 1rem;
+    }
+
+  .main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*align-items: center; 
+    because it assigned in mobile version*/
+    justify-content: center;
+    flex-direction: row;
+    }
 }
