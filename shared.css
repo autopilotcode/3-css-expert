@@ -47,12 +47,9 @@ main {
     top: 0;
     left: 0;
     z-index: 1;
-    }
-
-    .main-header > div {
-    /*inline+top&bottom padding*/
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     }
 
     .toggle-button {
@@ -81,16 +78,17 @@ main {
     .main-header__brand {
     color: #0e4f1f;
     text-decoration: none;
+    /*display: inline-block;
+    vertical-align: middle;
     /*works only if used font has bold version*/
     font-weight: bold;
     font-size: 1.5rem;
     height: 2.5rem;
-    display: inline-block;
-    vertical-align: middle;
     }
 
     .main-header__brand img {
-    height: 100%;
+    height: 2.5rem;
+    vertical-align: middle;
     }
 
 
@@ -105,10 +103,11 @@ main {
     padding: 0;
     /*removes the bullet points*/
     list-style: none;
+    display: flex;
+    flex-direction: row;
     }
 
     .main-nav__item {
-    display: inline-block;
     /*top&bot zero, l&right 16px*/
     margin: 0 1rem;
     }
@@ -149,10 +148,8 @@ main {
         display: none;
       }
       .main-nav {
-        display: inline-block;
-        text-align: right;
-        width: calc(100% - 44px);
-        vertical-align: middle;
+        display: flex;
+        align-items: center;
       }
     }
 
