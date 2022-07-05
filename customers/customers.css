@@ -6,17 +6,6 @@ main {
 .testimonial {
     font-size: 1.2rem;
   }
-  
-  /*.testimonial__list {
-    width: 80%;
-    margin: auto;
-  }*/
-  
-  /*removed because we add margin to our <main> element,
-  instead we added padding-top to<main>
-  .testimonial:first-of-type {
-    margin-top: 6rem;
-  }*/
 
   .testimonial__image-container {
     width: 100%;
@@ -73,16 +62,15 @@ main {
     .testimonial {
       margin: 3rem auto;
       max-width: 1500px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
     .testimonial__image-container {
-      display: inline-block;
-      vertical-align: middle;
       width: 65%;
       
     }
     .testimonial__info {
-      display: inline-block;
-      vertical-align: middle;
       width: 30%;
     }
   }
