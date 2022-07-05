@@ -6,17 +6,6 @@ main {
 .testimonial {
     font-size: 1.2rem;
   }
-  
-  /*.testimonial__list {
-    width: 80%;
-    margin: auto;
-  }*/
-  
-  /*removed because we add margin to our <main> element,
-  instead we added padding-top to<main>
-  .testimonial:first-of-type {
-    margin-top: 6rem;
-  }*/
 
   .testimonial__image-container {
     width: 100%;
