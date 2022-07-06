@@ -14,18 +14,32 @@ html {
     box-sizing: border-box;
 }*/
 
-/*html {
+html {
     height: 100%;
-}*/
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
+    height: 100%;
     margin: 0;
+    display: grid;
+    /*padding-top required because header position:fixed; (out of the doc flow)
+    but below we added grid rows sizes and padding unnecessary now*/
+    /*padding-top: 3.5rem;*/
+    /*double auto is not always works correctly
+    grid-template-rows: 3.5rem auto auto;*/
+    /*setting a min size footer 8rem, in case if content is smaller*/
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    /*creating areas*/
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
 }
 
 main {
-  min-height: calc(100vh - 3.5rem - 8rem);
-  margin-top: 3.5rem;
+  /*min-height: calc(100vh - 3.5rem - 8rem);*/
+  /*margin-top: 3.5rem;*/
+  grid-area: main;
 }
 
 .backdrop {
@@ -50,6 +64,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    grid-area: header;
     }
 
     .toggle-button {
@@ -157,6 +172,7 @@ main {
     background: black;
     padding: 2rem;
     margin-top: 3rem;
+    grid-area: footer;
     }
 
     .main-footer__links {
