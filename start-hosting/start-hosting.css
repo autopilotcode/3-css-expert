@@ -8,9 +8,13 @@ main {
 }
 
 .signup-form {
+    display: grid;
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+    grid-auto-rows: 2rem;
     padding: 1rem;
-            max-width: 25rem;
-            margin: auto;
+    /*max-width: 25rem;
+    margin: auto;*/
 }
 
 .signup-form label {
@@ -21,7 +25,7 @@ main {
 .signup-form select,
 .signup-form input {
     display: block;
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     width: 100%;    
 }
 
@@ -77,12 +81,23 @@ we can write*/
 advanced attribute selector*/
 .signup-form button[type="submit"] {
     display: block;
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
 }
 
 @media (min-width: 40rem) {
     .signup-form {
         margin: auto;
-        width: 25rem;
+        width: 30rem;
+        grid-template-columns: 10rem auto;
+        grid-row-gap: 0.5rem;
+    }
+
+    /*#title preferred, our variant for practice*/
+    .signup-form [id="title"] {
+        grid-column: span 2;
+    }
+
+    .signup-form__checkbox {
+        grid-column: span 2;
     }
 }
