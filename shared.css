@@ -42,9 +42,13 @@ main {
   grid-area: main;
 }
 
+/*when pop-up is appeared, backdrop don't allow to click on anything else*/
 .backdrop {
-    position: fixed;
+    /*remove it from the document flow*/
     display: none;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.2s linear;
     z-index: 100;
     width: 100vw;
     height: 100vh;
