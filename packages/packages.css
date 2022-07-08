@@ -23,6 +23,7 @@ main {
 }
 
 .package {
+    overflow: hidden;
     /*because horizontal blocks*/
     width: 80%;
     /*to make some space beetwen but 80% width each*/
@@ -48,15 +49,19 @@ main {
 }
 
 .package__badge {
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-1rem);
+    transform-origin: center;
     position: absolute;
     top: 0;
     right: 0;
-    margin: 1.2rem;
     font-size: 0.8rem;
     color: white;
     background: #ff5454;
     padding: 0.5rem;
+    width: 12rem;
+    text-align: center;
 }
+
 
 .package__subtitle {
     color: #979797;
