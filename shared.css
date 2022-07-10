@@ -42,9 +42,13 @@ main {
   grid-area: main;
 }
 
+/*when pop-up is appeared, backdrop don't allow to click on anything else*/
 .backdrop {
-    position: fixed;
+    /*remove it from the document flow*/
     display: none;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.2s linear;
     z-index: 100;
     width: 100vw;
     height: 100vh;
@@ -141,6 +145,12 @@ main {
     .mobile-nav__item a:active {
     color: white;
     border-bottom: 5px solid white;
+    }
+
+    .main-nav__item--cta {
+                      /*duration delay animation-iterations
+                      direction(alternate/reverse final-result*/
+      animation: wiggle 400ms 3s 8 ease-out none; 
     }
 
     .main-nav__item--cta a,
@@ -259,11 +269,13 @@ main {
       cursor: not-allowed;
       border: #a1a1a1;
       background: #ccc;
-      color: #a1a1a1;
+      color: #a1a1a1; 
     }*/
 
 .open {
     display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
@@ -282,4 +294,16 @@ main {
     justify-content: center;
     flex-direction: row;
     }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
+    transform: rotateZ(-10deg);
+  }
+  100% {
+    transform: rotateZ(10deg);
+  }
 }
