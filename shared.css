@@ -150,7 +150,7 @@ main {
     .main-nav__item--cta {
                       /*duration delay animation-iterations
                       direction(alternate/reverse final-result*/
-      animation: wiggle 200ms 3s 8 none; 
+      animation: wiggle 400ms 3s 8 ease-out none; 
     }
 
     .main-nav__item--cta a,
@@ -297,10 +297,13 @@ main {
 }
 
 @keyframes wiggle {
-  from {
+  0% {
+    transform: rotateZ(0);
+  }
+  50% {
     transform: rotateZ(-10deg);
   }
-  to {
+  100% {
     transform: rotateZ(10deg);
   }
 }
