@@ -2,17 +2,18 @@
 
 ###### [folders 13-19]
 
-* Adding Flexbox to our Project
+> Adding Flexbox to our Project
 
-* Using the CSS Grid
+> Using the CSS Grid
 
-* Transforming Elements with CSS Transforms
+> Transforming Elements with CSS Transforms
 
-* Transitions  Animations in CSS
+> Transitions  Animations in CSS
 
-* Writing Future-Proof CSS Code
+> Writing Future-Proof CSS Code
 
-* Introducing Sass (Syntactically Awesome Style Sheets) 
+> Introducing Sass (Syntactically Awesome Style Sheets) 
+---
 
 *Clone this project to your device, open* **index.html** *file in your browser and you'll see the result:*
 
