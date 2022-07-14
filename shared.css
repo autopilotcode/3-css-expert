@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 :root {
   --dark-green: #0e4f1f;
@@ -8,11 +8,13 @@
 }
 
 html {
-    box-sizing: border-box;   
+  box-sizing: border-box;
 }
 
-*, *:after, *:before {
-    box-sizing: inherit;    
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
 }
 
 /** {
@@ -20,18 +22,18 @@ html {
 }*/
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   /*padding-top required because header position:fixed; (out of the doc flow)
     but below we added grid rows sizes and padding unnecessary now*/
   padding-top: 3.5rem;
 }
 
-@supports (display:grid) {
+@supports (display: grid) {
   body {
     display: grid;
     /*double auto is not always works correctly
@@ -39,14 +41,14 @@ body {
     /*setting a min size footer 8rem, in case if content is smaller*/
     grid-template-rows: 3.5rem auto fit-content(8rem);
     /*creating areas*/
-    grid-template-areas: "header"
-                         "main"
-                         "footer";
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
     height: 100%;
     padding-top: 0;
+  }
 }
-}
-
 
 /* body {
     font-family: 'Montserrat', sans-serif;
@@ -55,13 +57,13 @@ body {
     display: grid;
     /*padding-top required because header position:fixed; (out of the doc flow)
     but below we added grid rows sizes and padding unnecessary now*/
-    /*padding-top: 3.5rem;*/
-    /*double auto is not always works correctly
+/*padding-top: 3.5rem;*/
+/*double auto is not always works correctly
     grid-template-rows: 3.5rem auto auto;*/
-    /*setting a min size footer 8rem, in case if content is smaller*/
-    /*grid-template-rows: 3.5rem auto fit-content(8rem);*/
-    /*creating areas*/
-    /*grid-template-areas: "header"
+/*setting a min size footer 8rem, in case if content is smaller*/
+/*grid-template-rows: 3.5rem auto fit-content(8rem);*/
+/*creating areas*/
+/*grid-template-areas: "header"
                          "main"
                          "footer";
 } */
@@ -74,231 +76,227 @@ main {
 
 /*when pop-up is appeared, backdrop don't allow to click on anything else*/
 .backdrop {
-    /*remove it from the document flow*/
-    display: none;
-    position: fixed;
-    opacity: 0;
-    transition: opacity 0.2s linear;
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    top: 0rem;
-    left: 0rem;
+  /*remove it from the document flow*/
+  display: none;
+  position: fixed;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0rem;
+  left: 0rem;
 }
 
 .main-header {
-    background-color: #2ddf5c;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 60;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-area: header;
-    }
+  background-color: #2ddf5c;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: header;
+}
 
-    .toggle-button {
-        width: 3rem;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding-top: 0;
-        padding-bottom: 0;
-        vertical-align: middle;
-      }
-      
-      .toggle-button:focus {
-        outline: none;
-      }
-      
-      .toggle-button__bar {
-        width: 100%;
-        height: 0.2rem;
-        background: black;
-        display: block;
-        margin: 0.6rem 0;
-      }
-      
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
 
-    .main-header__brand {
-    color: #0e4f1f;
-    text-decoration: none;
-    /*display: inline-block;
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+
+.main-header__brand {
+  color: #0e4f1f;
+  text-decoration: none;
+  /*display: inline-block;
     vertical-align: middle;
     /*works only if used font has bold version*/
-    font-weight: bold;
-    font-size: 1.5rem;
-    height: 2.5rem;
-    }
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 2.5rem;
+}
 
-    .main-header__brand img {
-    height: 2.5rem;
-    vertical-align: middle;
-    }
-
-
+.main-header__brand img {
+  height: 2.5rem;
+  vertical-align: middle;
+}
 
 .main-nav {
-    display: none;
-    }
+  display: none;
+}
 
-    .main-nav__items {
-    /*to positon to the right correctly*/
-    margin: 0;
-    padding: 0;
-    /*removes the bullet points*/
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    }
+.main-nav__items {
+  /*to positon to the right correctly*/
+  margin: 0;
+  padding: 0;
+  /*removes the bullet points*/
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
 
-    .main-nav__item {
-    /*top&bot zero, l&right 16px*/
-    margin: 0 1rem;
-    }
+.main-nav__item {
+  /*top&bot zero, l&right 16px*/
+  margin: 0 1rem;
+}
 
-    .main-nav__item a,
-    .mobile-nav__item a {
-    color: #0e4f1f;
-    text-decoration: none; 
-    font-weight: bold;
-    padding: 0.2rem 0;
-    }
+.main-nav__item a,
+.mobile-nav__item a {
+  color: #0e4f1f;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0;
+}
 
-    .main-nav__item a:hover,
-    .main-nav__item a:active,
-    .mobile-nav__item a:hover,
-    .mobile-nav__item a:active {
-    color: white;
-    border-bottom: 5px solid white;
-    }
+.main-nav__item a:hover,
+.main-nav__item a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
 
-    .main-nav__item--cta {
-                      /*duration delay animation-iterations
+.main-nav__item--cta {
+  /*duration delay animation-iterations
                       direction(alternate/reverse final-result*/
-      animation: wiggle 400ms 3s 8 ease-out none; 
-    }
+  animation: wiggle 400ms 3s 8 ease-out none;
+}
 
-    .main-nav__item--cta a,
-    .mobile-nav__item--cta a {
-    color: white;
-    background: var(--highlight-color);
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    }
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+  color: white;
+  background: var(--highlight-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
 
-    .main-nav__item--cta a:hover,
-    .main-nav__item--cta a:active {
-    color: var(--highlight-color);
-    background: white;
-    border: none;
-    }
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+  color: var(--highlight-color);
+  background: white;
+  border: none;
+}
 
-    @media (min-width: 40rem) {
-      .toggle-button {
-        display: none;
-      }
-      .main-nav {
-        display: flex;
-        align-items: center;
-      }
-    }
+@media (min-width: 40rem) {
+  .toggle-button {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+}
 
 .main-footer {
-    background: black;
-    padding: 2rem;
-    margin-top: 3rem;
-    grid-area: footer;
-    }
+  background: black;
+  padding: 2rem;
+  margin-top: 3rem;
+  grid-area: footer;
+}
 
-    .main-footer__links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
+.main-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.main-footer__link {
+  margin: 0.5rem 1rem;
+}
 
-    .main-footer__link {
-    margin: 0.5rem 1rem;
-    }
+.main-footer__link a {
+  color: white;
+  /*to remove the link*/
+  text-decoration: none;
+}
 
-    .main-footer__link a {
-    color: white;
-    /*to remove the link*/
-    text-decoration: none;
-    }
-
-    .main-footer__link a:hover,
-    .main-footer__link a:active {
-    color: #ccc;
-    }
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: #ccc;
+}
 
 .mobile-nav {
-    display: none;
-    position: fixed;
-    z-index: 101;
-    top: 0;
-    left: 0;
-    background: white;
-    width: 80%;
-    /*ensure that it always takes full page height
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  /*ensure that it always takes full page height
     without 100% cascading trick*/
-    height: 100vh;
-  }
-  
-  .mobile-nav__items {
-    width: 90%;
-    height: 100%;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .mobile-nav__item {
-    margin: 1rem 0;
-  }
-  
-  .mobile-nav__item a {
-    font-size: 1.5rem;
-  }
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+}
 
 .button {
-    background: var(--dark-green, #0e4f1f);
-    color: white;
-    font: inherit;
-    border: 1px solid var(--dark-green);
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    /*cursor can be added to the any element, to indicate location*/
-    cursor: pointer;
-    }
+  background: var(--dark-green, #0e4f1f);
+  color: white;
+  font: inherit;
+  border: 1px solid var(--dark-green);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  /*cursor can be added to the any element, to indicate location*/
+  cursor: pointer;
+}
 
-    .button:hover,
-    .button:active {
-    background: white;
-    color: var(--dark-green);
-    }
+.button:hover,
+.button:active {
+  background: white;
+  color: var(--dark-green);
+}
 
-    .button:focus {
-    outline: none;
-    }
+.button:focus {
+  outline: none;
+}
 
-    /*.button[disabled] {
+/*.button[disabled] {
       cursor: not-allowed;
       border: #a1a1a1;
       background: #ccc;
@@ -306,16 +304,15 @@ main {
     }*/
 
 .open {
-    display: block !important;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 @media (min-width: 40rem) {
-
   .main-footer__link {
     margin: 0rem 1rem;
-    }
+  }
 
   .main-footer__links {
     list-style: none;
@@ -326,7 +323,7 @@ main {
     because it assigned in mobile version*/
     justify-content: center;
     flex-direction: row;
-    }
+  }
 }
 
 @keyframes wiggle {

@@ -1,229 +1,225 @@
 #product-overview {
-    /*background: url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box border-box fixed;*/
-    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+  /*background: url("images/freedom.jpg") left 10% bottom 20%/cover no-repeat border-box border-box fixed;*/
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
     url("images/freedom.jpg") center/cover no-repeat border-box, #ff1b68;
-    /*background-image: url("images/freedom.jpg");*/
-    /*background-size: cover; 
+  /*background-image: url("images/freedom.jpg");*/
+  /*background-size: cover; 
     background-repeat: no-repeat;
     background-position: left 10% bottom 20%;
     background-origin: border-box;
     background-clip: border-box;
     background-attachment: fixed;
     /*we used border for understanding background-origin*/
-    /*border: 5px dashed red;*/
-    /*background-image: linear-gradient(to right bottom, red, #2ddf57, rgb(165, 42, 155));*/
-    /*background-image: radial-gradient(ellipse farthest-side at 20% 50%, red, blue, green);*/
-    width: 100vw;
-    height: 33vh;
-    position: relative;
+  /*border: 5px dashed red;*/
+  /*background-image: linear-gradient(to right bottom, red, #2ddf57, rgb(165, 42, 155));*/
+  /*background-image: radial-gradient(ellipse farthest-side at 20% 50%, red, blue, green);*/
+  width: 100vw;
+  height: 33vh;
+  position: relative;
 }
 
 #product-overview h1 {
-    color: white;
-    font-family: 'Anton', sans-serif;
-    position: absolute;
-    bottom: 5%;
-    left: 3%;
-    font-size: 1.6rem;
+  color: white;
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 40rem) and (min-height: 40rem) {
-    #product-overview {
-        height: 40vh;
-        background-position: 50% 25%;
-    }
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
 
-    #product-overview h1 {
-        font-size: 3rem;
-    }
+  #product-overview h1 {
+    font-size: 3rem;
+  }
 }
 
 .section-title {
-    color: #2ddf5c;
-    font-family: inherit;
-    text-align: center;
+  color: #2ddf5c;
+  font-family: inherit;
+  text-align: center;
 }
 
-
-
 .plan {
-    background: #d5ffdc;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
+  background: #d5ffdc;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
 }
 
 .plan--highlighted {
-    background: #19b84c;
-    color: white;
-    /*x axes, y axes, blurriness, spread*/
-    /*rgba 3 numbers -color, 4th number transparancy 0.5 = 50%*/
-    
+  background: #19b84c;
+  color: white;
+  /*x axes, y axes, blurriness, spread*/
+  /*rgba 3 numbers -color, 4th number transparancy 0.5 = 50%*/
 }
 
 .plan__annotation {
-    color: #19b84c;
-    background: white;
-    /*top right bottom left
+  color: #19b84c;
+  background: white;
+  /*top right bottom left
     border-radius: 4px 4px 4px 4px;*/
-    border-radius: 8px;
-    padding: 0.5rem;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .plan__title {
-    color: #0e4f1f;
+  color: #0e4f1f;
 }
 
-.plan__price {  
-    color: #858585;
+.plan__price {
+  color: #858585;
 }
 
 .plan--highlighted .plan__title {
-    color: white;
+  color: white;
 }
 
 .plan--highlighted .plan__price {
-    color: #0e4f1f;
+  color: #0e4f1f;
 }
 
 .plan__features {
-    /*removes the bullet points*/
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /*removes the bullet points*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .plan__feature {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 /*if width => 40rem - next rules will be applied*/
 @media (min-width: 40rem) {
-    .plan__list {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .plan__list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .plan {
-        width: 30%;
-        min-width: 13rem;
-        max-width: 25rem;
-        height: 28rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .plan--highlighted {
-        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-        height: 30rem;
-        z-index: 50;
-    }
+  .plan {
+    width: 30%;
+    min-width: 13rem;
+    max-width: 25rem;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    height: 30rem;
+    z-index: 50;
+  }
 }
 
-
 #key-features {
-    background-color: #ff1b68;
-    margin: auto;
-    margin-top: 4rem;
-    padding: 1rem;
+  background-color: #ff1b68;
+  margin: auto;
+  margin-top: 4rem;
+  padding: 1rem;
 }
 
 #key-features .section-title {
-    color: white;
-    margin: 2rem;
+  color: white;
+  margin: 2rem;
 }
 
 .key-feature__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .key-feature__image {
-    background-color: #ffcede;
-    width: 128px;
-    height: 128px;
-    border: 2px solid #424242;
-    /*for a perfect circle*/
-    border-radius: 50%;
-    /*to center this circle, it works only horizontally*/
-    margin: auto;
-    padding: 20px;
+  background-color: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  /*for a perfect circle*/
+  border-radius: 50%;
+  /*to center this circle, it works only horizontally*/
+  margin: auto;
+  padding: 20px;
 }
 
 .key-feature__description {
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 40rem) {
-    .key-feature {
-        width: 30%;
-        max-width: 25rem;
-    }
-    .key-feature__list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
+  .key-feature {
+    width: 30%;
+    max-width: 25rem;
+  }
+  .key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-
 .modal {
-    position: fixed;
-    opacity: 0;
-    transform: translateY(-3rem);
-    transition: opacity 200ms ease-out, transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    z-index: 200;
-    top: 20%;
-    left: 30%;
-    width: 40%;
-    background: white;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal__title {
-    text-align: center;
-    margin: 0 0 1rem 0;
-  } 
-  
-  .modal__actions {
-    text-align: center;
-  }
-  
-  .modal__action {
-    border: 1px solid #0e4f1f;
-    background: #0e4f1f;
-    text-decoration: none;
-    color: white;
-    font: inherit;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-  }
-  
-  .modal__action:hover,
-  .modal__action:active {
-    background: #2ddf5c;
-    border-color: #2ddf5c;
-  }
-  
-  .modal__action--negative {
-    background: red;
-    border-color: red;
-  }
-  
-  .modal__action--negative:hover,
-  .modal__action--negative:active {
-    background: #ff5454;
-    border-color: #ff5454;
-  }
+  position: fixed;
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 200ms ease-out,
+    transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
