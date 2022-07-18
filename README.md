@@ -14,6 +14,7 @@
 
 > Introducing Sass (Syntactically Awesome Style Sheets) 
 ---
+---
 
 *Clone this project to your device, open* **index.html** *file in your browser and you'll see the result:*
 
